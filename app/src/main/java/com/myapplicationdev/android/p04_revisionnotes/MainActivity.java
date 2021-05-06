@@ -27,6 +27,15 @@ public class MainActivity extends AppCompatActivity {
         btnInsert = (Button) findViewById(R.id.buttonInsertNote);
         btnShowList = (Button) findViewById(R.id.buttonShowList);
 
+        btnInsert.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DBHelper db = new DBHelper(MainActivity.this);
+                db.insertNote("Submit Note", 4);
+                db.close();
+            }
+        });
+
         btnShowList.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
