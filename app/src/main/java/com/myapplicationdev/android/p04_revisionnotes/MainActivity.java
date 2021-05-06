@@ -1,6 +1,7 @@
 package com.myapplicationdev.android.p04_revisionnotes;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
@@ -21,5 +22,6 @@ public class MainActivity extends AppCompatActivity {
         rg = findViewById(R.id.radioGroupStars);
         btnInsert = (Button) findViewById(R.id.buttonInsertNote);
         btnShowList = (Button) findViewById(R.id.buttonShowList);
+
     }
 }
