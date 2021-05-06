@@ -79,7 +79,8 @@ public class RevisionNotesArrayAdapter extends ArrayAdapter<Note> {
 			iv3.setImageResource(android.R.drawable.btn_star_big_off);
 			iv2.setImageResource(android.R.drawable.btn_star_big_off);
 			iv1.setImageResource(android.R.drawable.btn_star_big_on);
-		} else {
+		}
+		else {
 			iv5.setImageResource(android.R.drawable.btn_star_big_off);
 			iv4.setImageResource(android.R.drawable.btn_star_big_off);
 			iv3.setImageResource(android.R.drawable.btn_star_big_off);

@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Create the DBHelper object, passing in the
                 //activity's context
+                rgButton = findViewById(rg.getCheckedRadioButtonId());
                 DBHelper db = new DBHelper(MainActivity.this);
 
                 if (revisionNote.getText() == null) {
@@ -42,8 +43,10 @@ public class MainActivity extends AppCompatActivity {
                     note = "" + revisionNote.getText();
                 }
                 //Insert a task
-                int selectedId = rg.getCheckedRadioButtonId();
-                db.insertNote(note, selectedId);
+                int selectedId = rgButton.getId();
+                RadioButton rb = findViewById(selectedId);
+
+                db.insertNote(note, Integer.valueOf(rb.getText().toString()));
                 db.close();
 
                 Toast.makeText(MainActivity.this, "Inserted",
